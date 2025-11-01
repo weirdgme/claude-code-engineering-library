@@ -680,6 +680,249 @@
                     "(help desk|service desk).*?(setup|process)"
                 ]
             }
+        },
+        "infrastructure-architecture": {
+            "type": "domain",
+            "enforcement": "suggest",
+            "priority": "high",
+            "description": "Infrastructure architecture covering system design patterns, ADRs, multi-region design, disaster recovery, capacity planning, and reference architectures",
+            "promptTriggers": {
+                "keywords": [
+                    "architecture",
+                    "ADR",
+                    "architecture decision",
+                    "system design",
+                    "multi-region",
+                    "disaster recovery",
+                    "DR",
+                    "RTO",
+                    "RPO",
+                    "capacity planning",
+                    "reference architecture",
+                    "architectural pattern",
+                    "microservices architecture",
+                    "event-driven architecture",
+                    "CQRS",
+                    "migration architecture"
+                ],
+                "intentPatterns": [
+                    "(design|architect|plan).*?(architecture|system|infrastructure)",
+                    "(ADR|architecture decision).*?(create|write|document)",
+                    "(multi-region|disaster recovery|DR).*?(design|plan|setup)",
+                    "(capacity|scaling).*?(plan|estimate|calculate)",
+                    "(reference architecture|architectural pattern).*?(example|template)"
+                ]
+            },
+            "fileTriggers": {
+                "pathPatterns": [
+                    "**/docs/architecture/**/*.md",
+                    "**/ADR/**/*.md",
+                    "**/adr/**/*.md",
+                    "**/architecture/**/*.md"
+                ],
+                "contentPatterns": [
+                    "# ADR-",
+                    "Architecture Decision Record",
+                    "## Context",
+                    "## Decision",
+                    "## Consequences"
+                ]
+            }
+        },
+        "documentation-as-code": {
+            "type": "domain",
+            "enforcement": "suggest",
+            "priority": "high",
+            "description": "Documentation as code covering technical writing, API documentation, diagrams, documentation sites, and automation",
+            "promptTriggers": {
+                "keywords": [
+                    "documentation",
+                    "docs",
+                    "README",
+                    "technical writing",
+                    "API documentation",
+                    "OpenAPI",
+                    "Swagger",
+                    "diagram",
+                    "PlantUML",
+                    "Mermaid",
+                    "Docusaurus",
+                    "MkDocs",
+                    "changelog",
+                    "docs site",
+                    "documentation automation"
+                ],
+                "intentPatterns": [
+                    "(create|write|update).*?(documentation|docs|README)",
+                    "(API|endpoint).*?(documentation|document)",
+                    "(diagram|architecture diagram).*?(create|generate)",
+                    "(docs site|documentation site).*?(setup|build|deploy)",
+                    "(technical writing|writing guide).*?(style|best practice)"
+                ]
+            },
+            "fileTriggers": {
+                "pathPatterns": [
+                    "**/README.md",
+                    "**/docs/**/*.md",
+                    "**/openapi.yaml",
+                    "**/swagger.json",
+                    "**/*.puml",
+                    "**/docusaurus.config.js",
+                    "**/mkdocs.yml"
+                ],
+                "contentPatterns": [
+                    "```mermaid",
+                    "@startuml",
+                    "openapi: 3",
+                    "# API Documentation"
+                ]
+            }
+        },
+        "observability-engineering": {
+            "type": "domain",
+            "enforcement": "suggest",
+            "priority": "high",
+            "description": "Observability engineering covering distributed tracing, OpenTelemetry, APM tools, logs aggregation, and correlation strategies",
+            "promptTriggers": {
+                "keywords": [
+                    "observability",
+                    "distributed tracing",
+                    "tracing",
+                    "OpenTelemetry",
+                    "OTEL",
+                    "Jaeger",
+                    "Tempo",
+                    "Zipkin",
+                    "APM",
+                    "DataDog",
+                    "New Relic",
+                    "Dynatrace",
+                    "logs aggregation",
+                    "ELK",
+                    "Loki",
+                    "correlation",
+                    "trace ID",
+                    "span",
+                    "structured logging"
+                ],
+                "intentPatterns": [
+                    "(distributed tracing|tracing).*?(implement|setup|configure)",
+                    "(OpenTelemetry|OTEL).*?(instrumentation|setup|collector)",
+                    "(APM|DataDog|New Relic).*?(setup|integrate|configure)",
+                    "(logs|logging).*?(aggregation|centralize|correlation)",
+                    "(observability|correlation).*?(strategy|implement|setup)"
+                ]
+            },
+            "fileTriggers": {
+                "pathPatterns": [
+                    "**/otel-*.yaml",
+                    "**/otel-*.yml",
+                    "**/jaeger/**/*",
+                    "**/tempo/**/*",
+                    "**/loki/**/*",
+                    "**/instrumentation.ts",
+                    "**/tracing.ts"
+                ],
+                "contentPatterns": [
+                    "OpenTelemetry",
+                    "tracer.startSpan",
+                    "@opentelemetry",
+                    "span.setAttribute",
+                    "trace.getTracer"
+                ]
+            }
+        },
+        "database-engineering": {
+            "type": "domain",
+            "enforcement": "suggest",
+            "priority": "high",
+            "description": "Database engineering covering PostgreSQL/MySQL administration, query optimization, indexing, replication, and backup/recovery",
+            "promptTriggers": {
+                "keywords": [
+                    "database",
+                    "PostgreSQL",
+                    "MySQL",
+                    "query optimization",
+                    "EXPLAIN",
+                    "index",
+                    "indexing",
+                    "database replication",
+                    "pg_dump",
+                    "backup",
+                    "database administration",
+                    "database tuning",
+                    "slow query"
+                ],
+                "intentPatterns": [
+                    "(database|PostgreSQL|MySQL).*?(administration|admin|configure|optimize)",
+                    "(query|SQL).*?(optimization|optimize|slow|performance)",
+                    "(index|indexing).*?(create|strategy|design)",
+                    "(replication|replica).*?(setup|configure|streaming)",
+                    "(backup|restore|recovery).*?(database|pg_dump)"
+                ]
+            },
+            "fileTriggers": {
+                "pathPatterns": [
+                    "**/postgresql.conf",
+                    "**/my.cnf",
+                    "**/*.sql",
+                    "**/migrations/**/*.sql",
+                    "**/backup*.sh"
+                ],
+                "contentPatterns": [
+                    "CREATE INDEX",
+                    "EXPLAIN ANALYZE",
+                    "pg_dump",
+                    "max_connections",
+                    "shared_buffers"
+                ]
+            }
+        },
+        "api-engineering": {
+            "type": "domain",
+            "enforcement": "suggest",
+            "priority": "high",
+            "description": "API engineering covering REST API design, GraphQL, API gateways, rate limiting, and versioning strategies",
+            "promptTriggers": {
+                "keywords": [
+                    "API design",
+                    "REST API",
+                    "RESTful",
+                    "GraphQL",
+                    "gRPC",
+                    "API gateway",
+                    "rate limiting",
+                    "API versioning",
+                    "API security",
+                    "OAuth2",
+                    "JWT",
+                    "Kong",
+                    "Ambassador"
+                ],
+                "intentPatterns": [
+                    "(API|REST|GraphQL).*?(design|pattern|best practice)",
+                    "(rate limit|throttling).*?(implement|setup|configure)",
+                    "(API version|versioning).*?(strategy|implement)",
+                    "(API gateway|Kong|Ambassador).*?(setup|configure)",
+                    "(GraphQL|schema).*?(design|resolver|N\\+1)"
+                ]
+            },
+            "fileTriggers": {
+                "pathPatterns": [
+                    "**/graphql/**/*.ts",
+                    "**/*.graphql",
+                    "**/schema.graphql",
+                    "**/resolvers/**/*.ts",
+                    "**/api/**/*gateway*"
+                ],
+                "contentPatterns": [
+                    "type Query \\{",
+                    "type Mutation \\{",
+                    "graphql",
+                    "DataLoader",
+                    "rate-limit"
+                ]
+            }
         }
     },
     "notes": {

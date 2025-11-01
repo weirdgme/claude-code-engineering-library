@@ -555,6 +555,110 @@
                     "#!/bin/sh"
                 ]
             }
+        },
+        "network-engineering": {
+            "type": "domain",
+            "enforcement": "suggest",
+            "priority": "high",
+            "description": "Network engineering covering network design, TCP/IP, load balancing, firewalls, DNS",
+            "promptTriggers": {
+                "keywords": [
+                    "network",
+                    "networking",
+                    "load balancing",
+                    "firewall",
+                    "DNS",
+                    "routing",
+                    "switching",
+                    "VPN",
+                    "HAProxy",
+                    "nginx",
+                    "iptables",
+                    "TCP/IP"
+                ],
+                "intentPatterns": [
+                    "(configure|setup|design).*?(network|load balanc|firewall|DNS)",
+                    "(debug|troubleshoot).*?(network|connectivity|latency)",
+                    "(routing|switching|VPN).*?(configure|setup)"
+                ]
+            },
+            "fileTriggers": {
+                "pathPatterns": [
+                    "**/haproxy.cfg",
+                    "**/nginx.conf",
+                    "**/network/**/*",
+                    "**/firewall/**/*"
+                ],
+                "contentPatterns": [
+                    "frontend",
+                    "backend",
+                    "listen",
+                    "bind"
+                ]
+            }
+        },
+        "build-engineering": {
+            "type": "domain",
+            "enforcement": "suggest",
+            "priority": "high",
+            "description": "Build engineering covering build systems, compilation, dependency management, artifact repositories",
+            "promptTriggers": {
+                "keywords": [
+                    "build",
+                    "gradle",
+                    "maven",
+                    "bazel",
+                    "make",
+                    "compilation",
+                    "artifact",
+                    "dependency",
+                    "monorepo",
+                    "build system"
+                ],
+                "intentPatterns": [
+                    "(optimize|speed up|improve).*?build",
+                    "(gradle|maven|bazel|make).*?(build|compile)",
+                    "(monorepo|dependency).*?(manage|setup)"
+                ]
+            },
+            "fileTriggers": {
+                "pathPatterns": [
+                    "**/Makefile",
+                    "**/build.gradle",
+                    "**/pom.xml",
+                    "**/BUILD",
+                    "**/WORKSPACE"
+                ],
+                "contentPatterns": [
+                    "dependencies \\{",
+                    "plugins \\{",
+                    "<dependencies>"
+                ]
+            }
+        },
+        "general-it-engineering": {
+            "type": "domain",
+            "enforcement": "suggest",
+            "priority": "medium",
+            "description": "General IT engineering covering ITIL, service management, change management, IT governance",
+            "promptTriggers": {
+                "keywords": [
+                    "ITIL",
+                    "ITSM",
+                    "service management",
+                    "change management",
+                    "incident management",
+                    "help desk",
+                    "IT governance",
+                    "CMDB",
+                    "service catalog"
+                ],
+                "intentPatterns": [
+                    "(ITIL|ITSM|service).*?(management|process|framework)",
+                    "(incident|change|problem).*?(management|process)",
+                    "(help desk|service desk).*?(setup|process)"
+                ]
+            }
         }
     },
     "notes": {

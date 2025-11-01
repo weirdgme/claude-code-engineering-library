@@ -255,7 +255,13 @@
           "transcoding",
           "video",
           "video processing",
-          "pipeline"
+          "pipeline",
+          "WebAssembly",
+          "WASM",
+          "sandboxing",
+          "sandbox",
+          "developer productivity",
+          "developer experience"
         ],
         "intentPatterns": [
           "(create|setup|implement|configure).*?(infrastructure|platform|kubernetes|terraform)",
@@ -362,7 +368,17 @@
           "retention",
           "access control",
           "policies",
-          "data retention"
+          "data retention",
+          "FIPS 140-2",
+          "FIPS",
+          "HSM",
+          "hardware security module",
+          "post-quantum",
+          "quantum-resistant",
+          "cryptography",
+          "supply chain",
+          "provenance",
+          "transparency"
         ],
         "intentPatterns": [
           "(scan|check|find|detect).*?(vulnerability|security|secret|credential)",
@@ -573,7 +589,11 @@
           "scaling",
           "scale",
           "cost optimization",
-          "startup"
+          "startup",
+          "confidential computing",
+          "enclaves",
+          "SGX",
+          "secure enclave"
         ],
         "intentPatterns": [
           "(AWS|Azure|GCP).*?(setup|configure|deploy|create)",
@@ -698,7 +718,12 @@
           "live streaming",
           "low latency",
           "data diode",
-          "streaming"
+          "streaming",
+          "satellite",
+          "satellite communication",
+          "cross-domain",
+          "synchronization",
+          "data synchronization"
         ],
         "intentPatterns": [
           "(configure|setup|design).*?(network|load balanc|firewall|DNS)",
@@ -843,7 +868,35 @@
           "data backup",
           "classify",
           "classification question",
-          "data classification question"
+          "data classification question",
+          "multi-party computation",
+          "MPC",
+          "hardware security module",
+          "HSM clustering",
+          "edge computing",
+          "edge",
+          "100M users",
+          "millions of users",
+          "real-time streaming",
+          "concurrent viewers",
+          "concurrent users",
+          "machine learning",
+          "ML",
+          "AI",
+          "inference",
+          "ML inference",
+          "blockchain",
+          "distributed ledger",
+          "immutable",
+          "merger",
+          "healthcare merger",
+          "EHR systems",
+          "international expansion",
+          "GDPR",
+          "data residency",
+          "residency requirements",
+          "developer productivity",
+          "developer experience"
         ],
         "intentPatterns": [
           "(design|architect|plan).*?(architecture|system|infrastructure)",
@@ -1005,7 +1058,11 @@
           "cache",
           "medical imaging",
           "storage optimization",
-          "imaging"
+          "imaging",
+          "petabyte",
+          "petabyte-scale",
+          "analytics",
+          "big data"
         ],
         "intentPatterns": [
           "(database|PostgreSQL|MySQL).*?(administration|admin|configure|optimize)",

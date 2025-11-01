@@ -271,7 +271,10 @@
           "research computing",
           "HPC",
           "high-performance computing",
-          "cluster"
+          "cluster",
+          "automate",
+          "automation",
+          "automate things"
         ],
         "intentPatterns": [
           "(create|setup|implement|configure).*?(infrastructure|platform|kubernetes|terraform)",
@@ -392,7 +395,14 @@
           "PII",
           "personally identifiable information",
           "benefits processing",
-          "benefits"
+          "benefits",
+          "secure",
+          "be more secure",
+          "medical records",
+          "credit cards",
+          "government contractor",
+          "assessment",
+          "pass the assessment"
         ],
         "intentPatterns": [
           "(scan|check|find|detect).*?(vulnerability|security|secret|credential)",
@@ -457,7 +467,16 @@
           "performance",
           "logging",
           "audit logging",
-          "log management"
+          "log management",
+          "speed",
+          "complaining about speed",
+          "production down",
+          "down",
+          "logs",
+          "logs are all over",
+          "competitors",
+          "faster",
+          "faster than us"
         ],
         "intentPatterns": [
           "(define|create|implement|measure).*?(SLO|SLI|SLA|error budget)",
@@ -511,7 +530,10 @@
           "GitLab CI",
           "Jenkins",
           "Flagger",
-          "ArgoCD"
+          "ArgoCD",
+          "code changes",
+          "changes break",
+          "break production"
         ],
         "intentPatterns": [
           "(create|setup|configure|implement).*?(pipeline|CI/CD|deployment)",
@@ -613,7 +635,12 @@
           "SSO",
           "single sign-on",
           "state government",
-          "government portal"
+          "government portal",
+          "costs",
+          "infrastructure costs",
+          "spending",
+          "spending too much",
+          "costs are too high"
         ],
         "intentPatterns": [
           "(AWS|Azure|GCP).*?(setup|configure|deploy|create)",
@@ -743,7 +770,10 @@
           "satellite communication",
           "cross-domain",
           "synchronization",
-          "data synchronization"
+          "data synchronization",
+          "traffic isn't reaching",
+          "reaching the backend",
+          "isn't reaching"
         ],
         "intentPatterns": [
           "(configure|setup|design).*?(network|load balanc|firewall|DNS)",
@@ -936,7 +966,24 @@
           "tax filing",
           "tax",
           "public records",
-          "records management"
+          "records management",
+          "traffic",
+          "handle traffic",
+          "more traffic",
+          "launching",
+          "new regions",
+          "Black Friday",
+          "redundancy",
+          "grow",
+          "grow 10x",
+          "customers",
+          "instant",
+          "instant results",
+          "Europe",
+          "stay in Europe",
+          "data residency",
+          "latency",
+          "latency is unacceptable"
         ],
         "intentPatterns": [
           "(design|architect|plan).*?(architecture|system|infrastructure)",
@@ -986,7 +1033,10 @@
           "MkDocs",
           "changelog",
           "docs site",
-          "documentation automation"
+          "documentation automation",
+          "document",
+          "document our system",
+          "need to document"
         ],
         "intentPatterns": [
           "(create|write|update).*?(documentation|docs|README)",
@@ -1047,7 +1097,14 @@
           "viewer",
           "predictive maintenance",
           "smart factory",
-          "factory"
+          "factory",
+          "track",
+          "track what's happening",
+          "visibility",
+          "better visibility",
+          "root cause",
+          "find the root cause",
+          "failures"
         ],
         "intentPatterns": [
           "(distributed tracing|tracing).*?(implement|setup|configure)",
@@ -1105,7 +1162,11 @@
           "petabyte",
           "petabyte-scale",
           "analytics",
-          "big data"
+          "big data",
+          "queries",
+          "timing out",
+          "timeout",
+          "queries timing out"
         ],
         "intentPatterns": [
           "(database|PostgreSQL|MySQL).*?(administration|admin|configure|optimize)",
@@ -1159,7 +1220,12 @@
           "HL7",
           "FHIR",
           "upload",
-          "integration"
+          "integration",
+          "API needs work",
+          "integrate",
+          "can't integrate",
+          "partners",
+          "connect to partners"
         ],
         "intentPatterns": [
           "(API|REST|GraphQL).*?(design|pattern|best practice)",

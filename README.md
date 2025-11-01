@@ -326,6 +326,60 @@ dev/
 
 ---
 
+## How Infrastructure Topics Are Organized
+
+### DevOps Coverage Distribution
+
+**You might be wondering:** "Where's the DevOps skill?"
+
+**Answer:** DevOps practices are distributed across specialized disciplines, matching how modern engineering teams are structured:
+
+| DevOps Practice | Covered In | What You'll Find |
+|----------------|------------|------------------|
+| **CI/CD Pipelines** | release-engineering | GitHub Actions, Jenkins, deployment strategies, versioning, artifact management |
+| **Infrastructure as Code** | platform-engineering | Terraform, Pulumi, CloudFormation, GitOps (ArgoCD, Flux) |
+| **Container Orchestration** | platform-engineering | Kubernetes, Docker, service mesh, helm charts |
+| **Monitoring & Observability** | sre | Prometheus, Grafana, distributed tracing, SLO/SLI, alerting |
+| **Security Automation** | devsecops | SAST/DAST/SCA, secrets management, policy as code, vulnerability scanning |
+| **Cloud Infrastructure** | cloud-engineering | AWS, Azure, GCP services, multi-cloud, serverless, cloud networking |
+| **System Administration** | systems-engineering | Linux/Windows, Ansible, PowerShell, configuration management |
+| **Build Systems** | build-engineering | Gradle, Maven, Bazel, build optimization, caching strategies |
+| **Network Design** | network-engineering | Load balancing, SDN, VPN, network security, service mesh networking |
+| **IT Operations** | general-it-engineering | ITIL/ITSM, change management, incident management, service desk |
+
+**Why this approach?**
+- ✅ Aligns with modern engineering org structures (Platform team, SRE team, Security team, etc.)
+- ✅ Each skill goes deep on its domain (11 resource files each)
+- ✅ Skills integrate and reference each other
+- ✅ Easier to maintain and update
+- ✅ Pick only what you need
+
+**"DevSecOps" is security-focused**, not general DevOps - it covers SAST/DAST, container scanning, secrets management, and compliance automation.
+
+### Missing Infrastructure Disciplines?
+
+**Currently not covered** (potential future additions):
+
+- **Infrastructure Architecture** - High-level design patterns, multi-region, DR, capacity planning, architecture decision records
+- **Documentation as Code** - Technical writing, docs-as-code practices, OpenAPI/Swagger, API documentation, diagram generation
+- **Database Engineering** - PostgreSQL/MySQL administration, query optimization, replication, backup/restore, migration strategies
+- **Observability Engineering** - Deep dive beyond SRE monitoring: distributed tracing, APM, logs aggregation, metrics design
+- **API Engineering** - API design patterns, REST, GraphQL, API gateways, rate limiting, versioning strategies
+
+**Current coverage is comprehensive for:**
+- Platform operations (IaC, Kubernetes, GitOps)
+- CI/CD and release management
+- Cloud infrastructure (AWS, Azure, GCP)
+- Security automation
+- Site reliability practices
+- Systems and network administration
+- Build optimization
+- IT operations management
+
+**Want to contribute?** Open an issue or PR to add missing disciplines!
+
+---
+
 ## Key Concepts
 
 ### Hooks + skill-rules.json = Auto-Activation

@@ -251,7 +251,11 @@
           "HPA",
           "VPA",
           "cost optimization",
-          "finops"
+          "finops",
+          "transcoding",
+          "video",
+          "video processing",
+          "pipeline"
         ],
         "intentPatterns": [
           "(create|setup|implement|configure).*?(infrastructure|platform|kubernetes|terraform)",
@@ -343,7 +347,22 @@
           "become compliant",
           "sensitive",
           "sensitive data",
-          "data protection"
+          "data protection",
+          "BAA",
+          "Business Associate Agreement",
+          "DRM",
+          "encryption",
+          "ATO",
+          "3PAO",
+          "C3PAO",
+          "SPRS",
+          "compartmented",
+          "RMF",
+          "dual-national",
+          "retention",
+          "access control",
+          "policies",
+          "data retention"
         ],
         "intentPatterns": [
           "(scan|check|find|detect).*?(vulnerability|security|secret|credential)",
@@ -405,7 +424,10 @@
           "reliability",
           "availability",
           "capacity planning",
-          "performance"
+          "performance",
+          "logging",
+          "audit logging",
+          "log management"
         ],
         "intentPatterns": [
           "(define|create|implement|measure).*?(SLO|SLI|SLA|error budget)",
@@ -546,7 +568,12 @@
           "Kubernetes",
           "K8s",
           "secure environment",
-          "deployment"
+          "deployment",
+          "auto-scaling",
+          "scaling",
+          "scale",
+          "cost optimization",
+          "startup"
         ],
         "intentPatterns": [
           "(AWS|Azure|GCP).*?(setup|configure|deploy|create)",
@@ -665,7 +692,13 @@
           "HAProxy",
           "nginx",
           "iptables",
-          "TCP/IP"
+          "TCP/IP",
+          "CDN",
+          "content delivery",
+          "live streaming",
+          "low latency",
+          "data diode",
+          "streaming"
         ],
         "intentPatterns": [
           "(configure|setup|design).*?(network|load balanc|firewall|DNS)",
@@ -794,7 +827,23 @@
           "sensitive data",
           "data handling",
           "handling data",
-          "classification"
+          "classification",
+          "scale",
+          "scaling",
+          "fraud detection",
+          "PHI",
+          "monitoring system",
+          "recommendation engine",
+          "US persons",
+          "defense article",
+          "multi-tenant",
+          "data isolation",
+          "backup",
+          "recovery",
+          "data backup",
+          "classify",
+          "classification question",
+          "data classification question"
         ],
         "intentPatterns": [
           "(design|architect|plan).*?(architecture|system|infrastructure)",
@@ -897,7 +946,12 @@
           "correlation",
           "trace ID",
           "span",
-          "structured logging"
+          "structured logging",
+          "Sentry",
+          "error tracking",
+          "analytics",
+          "engagement",
+          "viewer"
         ],
         "intentPatterns": [
           "(distributed tracing|tracing).*?(implement|setup|configure)",
@@ -945,7 +999,13 @@
           "backup",
           "database administration",
           "database tuning",
-          "slow query"
+          "slow query",
+          "Redis",
+          "caching",
+          "cache",
+          "medical imaging",
+          "storage optimization",
+          "imaging"
         ],
         "intentPatterns": [
           "(database|PostgreSQL|MySQL).*?(administration|admin|configure|optimize)",
@@ -991,7 +1051,15 @@
           "OAuth2",
           "JWT",
           "Kong",
-          "Ambassador"
+          "Ambassador",
+          "Stripe",
+          "payment",
+          "payment gateway",
+          "EHR",
+          "HL7",
+          "FHIR",
+          "upload",
+          "integration"
         ],
         "intentPatterns": [
           "(API|REST|GraphQL).*?(design|pattern|best practice)",

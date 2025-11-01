@@ -332,7 +332,13 @@
           "shift-left",
           "policy as code",
           "CI/CD security",
-          "audit preparation"
+          "audit preparation",
+          "CUI",
+          "audit",
+          "audit preparation",
+          "infrastructure",
+          "patient",
+          "health information"
         ],
         "intentPatterns": [
           "(scan|check|find|detect).*?(vulnerability|security|secret|credential)",
@@ -531,7 +537,9 @@
           "Aqua",
           "Trend Micro",
           "Security Hub",
-          "Microsoft Defender"
+          "Microsoft Defender",
+          "Kubernetes",
+          "K8s"
         ],
         "intentPatterns": [
           "(AWS|Azure|GCP).*?(setup|configure|deploy|create)",

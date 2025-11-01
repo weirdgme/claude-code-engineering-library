@@ -104,7 +104,11 @@
           "Grid",
           "styling",
           "frontend",
-          "React"
+          "React",
+          "TanStack",
+          "TanStack Router",
+          "useSuspenseQuery",
+          "Suspense"
         ],
         "intentPatterns": [
           "(create|add|make|build|update|modify|edit).*?(component|UI|page|modal|dialog|form)",

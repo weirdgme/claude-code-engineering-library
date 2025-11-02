@@ -225,6 +225,97 @@ Slide 5: Comparison & Benchmarks
 
 **Pro tip:** Frame infrastructure cost as **cost per user** or **% of revenue** to show efficiency, not just absolute dollars.
 
+#### Budget Planning Scenarios
+
+**Scenario: "How much contingency buffer should we include?"**
+- **Standard:** 10-15% contingency for infrastructure budgets
+- **Calculation:** If base budget is $1.34M, add $134-200K contingency
+- **Use for:**
+  - Unexpected user growth spurts
+  - Security incidents requiring rapid scaling
+  - Failed efficiency initiatives (savings don't materialize)
+  - New compliance requirements
+- **Don't use for:** Planned initiatives (those should be in base budget)
+
+**Scenario: "What if we're spending X% of revenue on infrastructure?"**
+- **Benchmarks by stage:**
+  - Early stage (pre-PMF): 20-40% of revenue (acceptable, focus on growth)
+  - Growth stage: 15-25% of revenue (optimize as you scale)
+  - Scale stage: 10-15% of revenue (mature, efficient)
+- **If too high (>30%):** Focus on efficiency initiatives
+- **If too low (<10%):** May be underinvesting in infrastructure/reliability
+
+**Scenario: "How do we handle untagged costs?"**
+- **Problem:** $50K/month in untagged AWS resources
+- **Solution:**
+  1. Run quarterly tagging audits - find untagged resources
+  2. Email resource owners: "Tag or terminate in 30 days"
+  3. Auto-shutdown untagged non-production resources after 60 days
+  4. Track tagging compliance: Target 95%+
+- **Allocate untagged:** Split proportionally across teams until resolved
+
+**Scenario: "Should we cross-charge teams for their infrastructure?"**
+- **Showback (Recommended):**
+  - Show teams their costs, don't charge them
+  - Pros: Awareness without friction, teams optimize voluntarily
+  - Cons: No hard enforcement
+- **Chargeback:**
+  - Actually charge teams' budgets for infrastructure
+  - Pros: Strong incentive to optimize
+  - Cons: Bureaucracy, cross-team friction, accounting complexity
+- **Decision:** Start with showback. Only move to chargeback if waste is significant (>20%)
+
+**Scenario: "How can we optimize storage costs with lifecycle policies?"**
+- **S3 Lifecycle Rules:**
+  - Day 0-30: Standard S3 ($0.023/GB)
+  - Day 30-90: Infrequent Access ($0.0125/GB) - 46% savings
+  - Day 90+: Glacier ($0.004/GB) - 83% savings
+- **Example savings:**
+  - 100TB data, 50% older than 30 days
+  - Without lifecycle: $2,300/month
+  - With lifecycle: $1,150 + $250 = $1,400/month
+  - **Savings:** $900/month = $10.8K/year
+- **Action:** Implement lifecycle policies for logs, backups, archives
+
+**Scenario: "How do we benchmark our costs against industry?"**
+- **Metrics to compare:**
+  - Infrastructure cost per engineer: $5-15K/month
+  - Infrastructure cost per user: $0.50-5/month (varies by product)
+  - Infrastructure as % of revenue: 10-25%
+- **Where to get benchmarks:**
+  - FinOps Foundation reports
+  - Industry surveys (Gartner, Forrester)
+  - Peer companies (if you have relationships)
+- **Use benchmarks to:** Justify current spend or identify optimization opportunities
+
+**Scenario: "How do we explain cloud value to the board?"**
+- **Frame as business enablement:**
+  - "Cloud enables us to scale 10x without hiring 10x engineers"
+  - "Deployed 50 new features this year vs 12 last year (on-prem)"
+  - "Cloud costs $1.5M but saved $800K in datacenter costs + $500K in ops labor"
+- **Show ROI:**
+  - Time to market: Weeks → Days
+  - Reliability: 99.9% → 99.99% uptime
+  - Security: Automated compliance vs manual
+- **Avoid:** Technical jargon, focus on business outcomes
+
+**Scenario: "What should we present in quarterly business reviews (QBR)?"**
+- **Slide 1: Cost Summary**
+  - Total spend: $450K (vs $425K budget, +6%)
+  - Trend: Up 8% QoQ (expected due to growth)
+  - Cost per user: $2.50 (down from $2.75, improving efficiency)
+- **Slide 2: Drivers of Change**
+  - User growth: +15% → +$40K
+  - New ML feature: +$30K
+  - Reserved instance savings: -$15K
+- **Slide 3: Efficiency Initiatives**
+  - Right-sizing: Saved $25K this quarter
+  - Storage lifecycle: Saved $10K/quarter ongoing
+  - Next: Spot instances pilot (+$15K savings potential)
+- **Slide 4: Forecast**
+  - Q4 projection: $460K (on track for annual budget)
+  - Risk: Potential user surge during holiday season
+
 ---
 
 ### 3. Cost Allocation and Chargebacks

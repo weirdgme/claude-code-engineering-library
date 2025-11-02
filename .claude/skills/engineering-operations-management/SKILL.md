@@ -123,6 +123,85 @@ Cons: More complex to administer
 - Mandatory break after high-page-volume week
 - No on-call during PTO or major life events
 
+#### On-Call Scenarios
+
+**Scenario: "What's a fair after-hours pay model?"**
+- **Hybrid model (recommended):**
+  - Base: $500/week on-call stipend
+  - Plus: $100-150 per after-hours page
+  - Plus: 1.5x comp time for hours worked
+- **Example calculation:**
+  - Week stipend: $500
+  - 3 after-hours pages × $125 = $375
+  - 4 hours worked × 1.5 = 6 hours comp time
+  - **Total value:** $875 + 6 hours off
+
+**Scenario: "Team blamed someone in incident review - how to fix?"**
+- **Immediate:** Stop the review, reset the tone
+- **Say:** "We don't blame people, we fix systems. Let's focus on what failed, not who."
+- **Blameless culture principles:**
+  - People make reasonable decisions based on information available
+  - Systems should prevent single points of failure
+  - Focus on "what" not "who"
+- **Follow-up:** Coach manager running review on blameless principles
+
+**Scenario: "During incident, what should I do as manager?"**
+- **Monitor:** Watch incident channel, don't interrupt
+- **Support:** "What do you need? More people? Communication handled?"
+- **Shield:** Handle exec questions, keep pressure off team
+- **Don't:** Take over, second-guess, or ask "why" questions mid-incident
+- **After:** Thank team, schedule postmortem, ensure comp time taken
+
+**Scenario: "How do we track incident trends?"**
+- **Metrics to track:**
+  - Incident frequency (per week/month)
+  - MTTR (mean time to recovery)
+  - Incidents by service/component
+  - Incidents by root cause category
+- **Look for patterns:**
+  - Same service failing repeatedly → systemic issue
+  - MTTR increasing → lack of familiarity or tooling gaps
+  - Spike in incidents → recent deploy or infrastructure change
+- **Action:** Address top 3 incident sources quarterly
+
+**Scenario: "What incident communication plan do we need?"**
+- **During incident:**
+  - Sev 1: Updates every 30 minutes to execs, status page every 15 min
+  - Sev 2: Updates every hour to stakeholders
+  - Sev 3: Update when resolved
+- **Channels:**
+  - Internal: Dedicated Slack #incidents channel
+  - External: Status page (Statuspage.io, etc.)
+  - Executives: Email + Slack DM for Sev 1/2
+- **Template:**
+  ```
+  [SEV 1] API Service Outage
+  Impact: All users unable to login
+  Status: Investigating
+  Next update: 2:30 PM (15 minutes)
+  ```
+
+**Scenario: "What's the right retrospective format?"**
+- **Timeline:** Within 48 hours of incident (while fresh)
+- **Attendees:** Incident responders + anyone interested (open invitation)
+- **Duration:** 45-60 minutes
+- **Format:**
+  1. Timeline walkthrough (10 min)
+  2. What went well (10 min)
+  3. What went poorly (15 min)
+  4. Action items (15 min) - with owners and due dates
+  5. Q&A (10 min)
+- **Output:** Written postmortem + action items tracked
+
+**Scenario: "How do we communicate incidents to executives?"**
+- **During:** Brief, factual updates
+  - "API down, 100% of users affected, team investigating"
+- **After:** Business-focused summary
+  - Revenue impact: "$50K in lost sales"
+  - User impact: "10K users couldn't check out for 2 hours"
+  - Prevention: "Adding rate limiting to prevent recurrence"
+- **Avoid:** Deep technical details unless asked
+
 ---
 
 ### 2. Incident Management for Managers
@@ -680,6 +759,39 @@ Every incident is a learning opportunity.
 - Blameless, automate toil, sustainable on-call
 - Lead by example, celebrate ops wins
 - Protect team from burnout
+
+### Culture Building Scenario
+
+**Scenario: "How do we build a sustainable ops culture?"**
+- **Blameless:**
+  - Never "who broke it?" Always "what broke and how do we prevent it?"
+  - Share postmortems openly - learn from all incidents
+  - Reward transparency (caught early) over hiding (festered)
+- **Automate toil:**
+  - Track toil percentage (target < 30%)
+  - Dedicate 20% time to automation
+  - Celebrate "we automated ourselves out of that problem"
+- **Sustainable on-call:**
+  - No hero culture - don't celebrate all-nighters
+  - Enforce comp time and breaks
+  - Fix systems that cause repeated pages
+- **Recognition:**
+  - Highlight ops wins in all-hands: "Automated X, saved 50 hours/month"
+  - Incident response recognition: "Great job handling outage calmly"
+  - Quality over speed: "Prevented incident with thorough testing"
+
+**Scenario: "How do we prevent hero culture?"**
+- **Heroes are a symptom of broken systems**
+- **Signs of hero culture:**
+  - Same engineer always saves the day
+  - Working nights/weekends is celebrated
+  - "We need you" used as motivation
+- **How to fix:**
+  - Document hero's knowledge → spread it
+  - Automate hero's manual tasks
+  - Create runbooks for common issues
+  - Rotate responsibilities - don't depend on one person
+- **Say:** "I appreciate your dedication, but this is unsustainable. Let's fix the system so you don't need to be a hero."
 
 ---
 

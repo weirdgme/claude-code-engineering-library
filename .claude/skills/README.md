@@ -29,7 +29,19 @@ Development-focused skills for application code, testing, and error tracking.
 ### skill-developer (Meta-Skill)
 **Purpose:** Creating and managing Claude Code skills
 
-**Files:** 7 resource files (426 lines total)
+**Files:** 7 total files (426 lines main SKILL.md + 6 additional resource files)
+
+**Unique structure:** Unlike other skills, skill-developer stores its resource files in the root directory (not in resources/ subdirectory):
+```
+skill-developer/
+├── SKILL.md                     # Main skill file
+├── ADVANCED.md                  # Advanced patterns
+├── HOOK_MECHANISMS.md           # Hook system details
+├── PATTERNS_LIBRARY.md          # Common patterns
+├── SKILL_RULES_REFERENCE.md     # skill-rules.json guide
+├── TRIGGER_TYPES.md             # Trigger configuration
+└── TROUBLESHOOTING.md           # Debugging guide
+```
 
 **Use when:**
 - Creating new skills

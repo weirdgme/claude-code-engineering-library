@@ -21,7 +21,7 @@ The original project by **diet103** provided the breakthrough patterns and core 
 
 **This fork extends the original with:**
 - 🎯 **15 infrastructure engineering skills** (vs. original 5 development skills)
-- 🎯 **165+ total resource files** covering platform, security, SRE, cloud (AWS/Azure/GCP/OCI), cybersecurity, systems, network, build, architecture, observability, and more
+- 🎯 **155+ total resource files** covering platform, security, SRE, cloud (AWS/Azure/GCP/OCI), cybersecurity, systems, network, build, architecture, observability, database, API engineering, and more
 - 🎯 **Infrastructure focus** while maintaining all original development patterns
 
 **Massive thanks to diet103** for creating the foundation, documenting the patterns, and sharing this invaluable work with the community. This showcase builds directly on their innovation and production-tested insights.
@@ -168,27 +168,27 @@ skill-name/
 .claude/
 ├── skills/                 # 25 production skills (15 infrastructure + 5 manager + 5 developer)
 │   ├── Development (5):
-│   │   ├── backend-dev-guidelines/  (11 resource files)
-│   │   ├── frontend-dev-guidelines/ (10 resource files)
-│   │   ├── skill-developer/         (7 resource files)
-│   │   ├── route-tester/
-│   │   └── error-tracking/
+│   │   ├── backend-dev-guidelines/  (11 resources)
+│   │   ├── frontend-dev-guidelines/ (10 resources)
+│   │   ├── skill-developer/         (6 additional files - unique structure)
+│   │   ├── route-tester/            (standalone)
+│   │   └── error-tracking/          (standalone)
 │   ├── Infrastructure (15):
-│   │   ├── platform-engineering/          (11 resource files)
-│   │   ├── devsecops/                    (11 resource files)
-│   │   ├── cybersecurity/                (3 resource files)
-│   │   ├── sre/                          (11 resource files)
-│   │   ├── release-engineering/          (10 resource files)
-│   │   ├── cloud-engineering/            (11 resource files)
-│   │   ├── systems-engineering/          (12 resource files)
-│   │   ├── network-engineering/          (10 resource files)
-│   │   ├── build-engineering/            (10 resource files)
-│   │   ├── general-it-engineering/       (10 resource files)
-│   │   ├── infrastructure-architecture/  (11 resource files)
-│   │   ├── documentation-as-code/        (10 resource files)
-│   │   ├── observability-engineering/    (6 resource files)
-│   │   ├── database-engineering/         (4 resource files)
-│   │   └── api-engineering/              (4 resource files)
+│   │   ├── platform-engineering/          (11 resources)
+│   │   ├── devsecops/                    (13 resources)
+│   │   ├── cybersecurity/                (1 comprehensive resource)
+│   │   ├── sre/                          (11 resources)
+│   │   ├── release-engineering/          (10 resources)
+│   │   ├── cloud-engineering/            (13 resources)
+│   │   ├── systems-engineering/          (12 resources)
+│   │   ├── network-engineering/          (10 resources)
+│   │   ├── build-engineering/            (10 resources)
+│   │   ├── general-it-engineering/       (10 resources)
+│   │   ├── infrastructure-architecture/  (13 resources)
+│   │   ├── documentation-as-code/        (10 resources)
+│   │   ├── observability-engineering/    (6 resources)
+│   │   ├── database-engineering/         (4 resources)
+│   │   └── api-engineering/              (4 resources)
 │   └── skill-rules.json    # Skill activation configuration
 ├── hooks/                  # 11 hooks for automation
 │   ├── skill-activation-prompt.*  (ESSENTIAL - bash, PowerShell, TypeScript)
@@ -230,13 +230,15 @@ dev/
 
 **Development Skills (5):**
 
-| Skill | Lines | Purpose | Best For |
-|-------|-------|---------|----------|
-| [**skill-developer**](.claude/skills/skill-developer/) | 426 | Creating and managing skills | Meta-development |
-| [**backend-dev-guidelines**](.claude/skills/backend-dev-guidelines/) | 304 | Express/Prisma/Sentry patterns | Backend APIs |
-| [**frontend-dev-guidelines**](.claude/skills/frontend-dev-guidelines/) | 398 | React/MUI v7/TypeScript | React frontends |
-| [**route-tester**](.claude/skills/route-tester/) | 389 | Testing authenticated routes | API testing |
-| [**error-tracking**](.claude/skills/error-tracking/) | ~250 | Sentry integration | Error monitoring |
+| Skill | Lines (SKILL.md) | Resources | Purpose | Best For |
+|-------|------------------|-----------|---------|----------|
+| [**skill-developer**](.claude/skills/skill-developer/) | 426 | 6 files* | Creating and managing skills | Meta-development |
+| [**backend-dev-guidelines**](.claude/skills/backend-dev-guidelines/) | 304 | 11 | Express/Prisma/Sentry patterns | Backend APIs |
+| [**frontend-dev-guidelines**](.claude/skills/frontend-dev-guidelines/) | 398 | 10 | React/MUI v7/TypeScript | React frontends |
+| [**route-tester**](.claude/skills/route-tester/) | 389 | 0 | Testing authenticated routes | API testing |
+| [**error-tracking**](.claude/skills/error-tracking/) | ~250 | 0 | Sentry integration | Error monitoring |
+
+*skill-developer has a unique structure with files in the root directory rather than in resources/ folder
 
 **Infrastructure Skills (15):**
 

@@ -16,7 +16,13 @@ Agents are autonomous Claude instances that handle specific complex tasks. Unlik
 
 ---
 
-## Available Agents (10)
+## Available Agents (21 Total)
+
+All agents are standalone - just copy the `.md` file and use immediately!
+
+---
+
+## Development Agents (10)
 
 ### code-architecture-reviewer
 **Purpose:** Review code for architectural consistency and best practices
@@ -146,6 +152,151 @@ Agents are autonomous Claude instances that handle specific complex tasks. Unlik
 
 ---
 
+## Infrastructure Agents (11)
+
+### infrastructure-architect
+**Purpose:** Design and review cloud-native architectures
+
+**When to use:**
+- Designing new infrastructure
+- Reviewing architecture decisions
+- Validating infrastructure patterns
+- Getting recommendations for improvements
+
+**Integration:** ✅ Copy as-is
+
+---
+
+### kubernetes-specialist
+**Purpose:** Kubernetes troubleshooting, manifest generation, and cluster management
+
+**When to use:**
+- Troubleshooting Kubernetes issues
+- Creating or reviewing Kubernetes manifests
+- Debugging pod/deployment problems
+- Cluster architecture questions
+
+**Integration:** ✅ Copy as-is
+
+---
+
+### iac-code-generator
+**Purpose:** Generate Infrastructure as Code (Terraform, Pulumi, CloudFormation)
+
+**When to use:**
+- Creating new infrastructure modules
+- Generating IaC from requirements
+- Converting between IaC tools
+- Creating complete infrastructure stacks
+
+**Integration:** ✅ Copy as-is
+
+---
+
+### security-scanner
+**Purpose:** Security vulnerability analysis and remediation recommendations
+
+**When to use:**
+- Analyzing infrastructure for security issues
+- Reviewing IaC for misconfigurations
+- Compliance checking
+- Security best practice validation
+
+**Integration:** ✅ Copy as-is
+
+---
+
+### deployment-orchestrator
+**Purpose:** Design deployment pipelines and progressive delivery strategies
+
+**When to use:**
+- Designing CI/CD pipelines
+- Implementing blue-green or canary deployments
+- Planning rollout strategies
+- Creating deployment automation
+
+**Integration:** ✅ Copy as-is
+
+---
+
+### cost-optimizer
+**Purpose:** Cloud cost analysis and optimization recommendations
+
+**When to use:**
+- Analyzing infrastructure costs
+- Finding cost optimization opportunities
+- Right-sizing resources
+- Implementing FinOps practices
+
+**Integration:** ✅ Copy as-is
+
+---
+
+### migration-planner
+**Purpose:** Cloud migration and modernization planning
+
+**When to use:**
+- Planning cloud migrations
+- Modernizing legacy applications
+- Assessing migration strategies
+- Creating migration roadmaps
+
+**Integration:** ✅ Copy as-is
+
+---
+
+### network-architect
+**Purpose:** Network design and architecture
+
+**When to use:**
+- Designing network topologies
+- Planning load balancing strategies
+- Network security architecture
+- Troubleshooting network issues
+
+**Integration:** ✅ Copy as-is
+
+---
+
+### build-optimizer
+**Purpose:** Build performance analysis and optimization
+
+**When to use:**
+- Optimizing slow builds
+- Implementing build caching
+- Improving CI/CD pipeline performance
+- Build system recommendations
+
+**Integration:** ✅ Copy as-is
+
+---
+
+### incident-responder
+**Purpose:** Incident response and debugging guidance
+
+**When to use:**
+- During production incidents
+- Root cause analysis
+- Creating runbooks
+- Debugging complex issues
+
+**Integration:** ✅ Copy as-is
+
+---
+
+### plan-reviewer
+**Purpose:** Review technical plans and proposals
+
+**When to use:**
+- Reviewing infrastructure plans
+- Validating technical proposals
+- Risk assessment
+- Identifying potential issues
+
+**Integration:** ✅ Copy as-is
+
+---
+
 ## How to Integrate an Agent
 
 ### Standard Integration (Most Agents)
@@ -205,6 +356,8 @@ That's it! Agents work immediately.
 
 ## Agent Quick Reference
 
+### Development Agents
+
 | Agent | Complexity | Customization | Auth Required |
 |-------|-----------|---------------|---------------|
 | code-architecture-reviewer | Medium | ✅ None | No |
@@ -217,6 +370,22 @@ That's it! Agents work immediately.
 | auth-route-tester | Medium | ⚠️ Auth setup | JWT cookies |
 | auth-route-debugger | Medium | ⚠️ Auth setup | JWT cookies |
 | auto-error-resolver | Low | ⚠️ Paths | No |
+
+### Infrastructure Agents
+
+| Agent | Complexity | Customization | Auth Required |
+|-------|-----------|---------------|---------------|
+| infrastructure-architect | Medium | ✅ None | No |
+| kubernetes-specialist | Medium | ✅ None | No |
+| iac-code-generator | Medium | ✅ None | No |
+| security-scanner | Medium | ✅ None | No |
+| deployment-orchestrator | Medium | ✅ None | No |
+| cost-optimizer | Low | ✅ None | No |
+| migration-planner | Medium | ✅ None | No |
+| network-architect | Medium | ✅ None | No |
+| build-optimizer | Low | ✅ None | No |
+| incident-responder | Medium | ✅ None | No |
+| plan-reviewer | Low | ✅ None | No |
 
 ---
 
